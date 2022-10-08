@@ -389,7 +389,8 @@ button:focus {
 
 footer {
     display: flex;
-    justify-content: start;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 footer .col {
@@ -406,12 +407,43 @@ footer .logo {
 }
 
 footer h4 {
-    font-size: 14px;
+    font-size: 16px;
     padding-bottom: 20px;
+}
+
+footer p {
+    margin: 0 0 8px 0;
+    color: #222;
+}
+
+footer a {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+footer a:hover {
+    margin-bottom: 10px;
+    color: #FFABE1;
+}
+
+footer .follow i {
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover {
+    color: #FFABE1;
 }
 
 footer .install .row img {
     width: 120px;
+    border: 1px solid #FFABE1;
+    border-radius: 6px;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
 }
 
 
