@@ -44,7 +44,11 @@
 }
 
 #mobile {
-    display: flex;
+    display: none;
+}
+
+#close {
+    display: none;
 }
 
 h2 {
@@ -218,8 +222,6 @@ button:focus {
 }
 
 #hero button {
-    /* background-image: url("img/btn.jpg");
-    */
     background-color: #FFE6F7;
     color: black;
     border: 0;
@@ -228,6 +230,11 @@ button:focus {
     border-radius: 90px;
     font-weight: 700;
     font-size: 15px;
+}
+
+#hero button:hover {
+    background-color: #C689C6;
+    color: #000;
 }
 
 
@@ -319,7 +326,7 @@ button:focus {
     padding-top: 7px;
     font-size: 19px;
     font-weight: 700;
-    color: rgb(230, 30, 30);
+    color: #fa00a3;
 }
 
 #product1 .pro .cart {
@@ -449,7 +456,10 @@ footer .copyright {
 
 /*Media query*/
 
-@media (max-width:768px) {
+@media (max-width:799px) {
+    .section-p1 {
+        padding: 40px 40px;
+    }
     #header {
         padding: 0;
     }
@@ -459,7 +469,8 @@ footer .copyright {
         align-items: flex-start;
         justify-content: flex-start;
         top: 0;
-        right: -104px;
+        right: -300px;
+        position: fixed;
         width: 300px;
         background-color: #FFE6F7;
         border-top-left-radius: 100px;
@@ -474,23 +485,42 @@ footer .copyright {
         right: 0px;
     }
     #mobile {
-        display: none;
+        display: flex;
         align-items: center;
     }
     #mobile i {
         color: #222;
         font-size: 24px;
-        padding-left: 20px;
+        padding: 20px;
+        cursor: pointer;
     }
     #close {
+        display: initial;
         position: absolute;
         top: 30px;
-        left: 30px;
+        right: 30px;
         color: #222;
         font-size: 24px;
     }
+    #lg-bag {
+        display: none;
+    }
     .img-hero {
         width: 50%;
-        max-width: 50%;
+    }
+    #feature {
+        justify-content: center;
+    }
+    #feature .fe-box {
+        margin: 15px 15px;
+    }
+    #product1 .pro-container {
+        justify-content: center;
+    }
+    #product1 .pro {
+        margin: 15px;
+    }
+    #banner {
+        height: 25vh;
     }
 }
