@@ -8,32 +8,6 @@
     text-decoration: none;
 }
 
-.nav h1 {
-    font-family: 'Sacramento', cursive;
-    font-size: 50px;
-    line-height: 64px;
-    color: #222;
-    z-index: 33;
-    position: relative;
-    padding-right: 15px;
-}
-
-.nav h1 span {
-    font-family: 'Sacramento', cursive;
-    color: #FFABE1;
-    font-size: 40px;
-}
-
-.circle {
-    background-color: #C689C6;
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
-    z-index: 1;
-    position: absolute;
-    left: 100px;
-}
-
 #header {
     display: flex;
     align-items: center;
@@ -41,32 +15,33 @@
     padding: 20px 80px;
 }
 
-.navbar {
+#header img {
+    width: 180px;
+}
+
+#navbar {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.navbar li {
+#navbar li {
     list-style: none;
     padding: 0 20px;
 }
 
-.navbar li a {
+#navbar li a {
     font-size: 20px;
     font-weight: 600;
     color: #222;
 }
 
-.navbar li a:hover {
+#navbar li a:hover {
     color: #FFABE1;
 }
 
-.img {
-    width: 60%;
-    max-width: 60%;
-    right: 0;
-    position: absolute;
+#mobile {
+    display: flex;
 }
 
 h2 {
@@ -215,6 +190,14 @@ button:focus {
     justify-content: center;
 }
 
+.img-hero {
+    width: 60%;
+    max-width: 60%;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
 #hero h4 {
     padding-bottom: 15px;
     font-size: 30px;
@@ -276,4 +259,117 @@ button:focus {
     line-height: 1;
     border-radius: 4px;
     color: #222;
+}
+
+
+/* Product*/
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+#product1 .pro:hover {
+    scale: 1.5;
+}
+
+#product1 .pro img {
+    width: 100%;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+
+/*Footer*/
+
+footer {
+    display: flex;
+    justify-content: start;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-right: 80px;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+    width: 180px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer .install .row img {
+    width: 120px;
+}
+
+
+/*Media query*/
+
+@media (max-width:768px) {
+    #header {
+        padding: 0;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        top: 0;
+        right: -104px;
+        width: 300px;
+        background-color: #FFE6F7;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 30px;
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    #navbar li {
+        margin-bottom: 20px;
+    }
+    #navbar.active {
+        right: 0px;
+    }
+    #mobile {
+        display: none;
+        align-items: center;
+    }
+    #mobile i {
+        color: #222;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+    .img-hero {
+        width: 50%;
+        max-width: 50%;
+    }
 }

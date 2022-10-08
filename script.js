@@ -26,3 +26,14 @@ const changeSlide = (direction) => {
     slideRight.style.transform = `translateY(-${ activeSlideIndex * sliderHeight}px)`
     slideLeft.style.transform = `translateY(${ activeSlideIndex * sliderHeight}px)`
 }
+
+/* Navbar button */
+
+const bar = document.getElementById('bar');
+const nav = document.getElementById('navbar');
+
+if (bar) {
+    bar.addEventListener('click', () => {
+        nav.classList.add('active');
+    })
+}
